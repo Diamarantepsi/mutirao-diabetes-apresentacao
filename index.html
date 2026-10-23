@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mutirão do Diabetes · Apoie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul: #1652C8;
+    --azul-esc: #0A2350;
+    --azul-cl: #E7EEFC;
+    --laranja: #FF7A2F;
+    --amarelo: #FFC845;
+    --creme: #FFF7EE;
+    --tinta: #13203A;
+    --cinza: #5B6680;
+    --titulo: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --texto: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: radial-gradient(circle at 30% 20%, #EEF3FB, #CBD6EA);
+    font-family: var(--texto);
+    color: var(--tinta);
+    display: grid;
+    place-items: center;
+    gap: 14px;
+    min-height: 100vh;
+    padding: 16px;
+  }
+
+  /* ---------- moldura de celular ---------- */
+  .palco { display: flex; align-items: center; gap: 22px; }
+  .aparelho {
+    position: relative;
+    height: min(90vh, 880px);
+    aspect-ratio: 9 / 16;
+    border-radius: 38px;
+    overflow: hidden;
+    background: var(--creme);
+    box-shadow: 0 0 0 10px #111A2E, 0 30px 70px rgba(10, 35, 80, .35);
+    container-type: inline-size;
+  }
+  .seta {
+    width: 52px; height: 52px; border-radius: 50%;
+    border: none; background: #fff; color: var(--azul-esc);
+    font-size: 24px; cursor: pointer;
+    box-shadow: 0 6px 18px rgba(10, 35, 80, .18);
+    transition: transform .15s, opacity .2s;
+  }
+  .seta:hover { transform: scale(1.08); }
+  .seta:disabled { opacity: .3; cursor: default; transform: none; }
+  .legenda { font-size: 13px; color: var(--cinza); text-align: center; }
+
+  /* ---------- barra de progresso estilo stories ---------- */
+  .progresso {
+    position: absolute; top: 3.2cqw; left: 5cqw; right: 5cqw; z-index: 5;
+    display: flex; gap: 1.2cqw;
+  }
+  .progresso span {
+    flex: 1; height: .9cqw; border-radius: 1cqw;
+    background: rgba(19, 32, 58, .18);
+    overflow: hidden;
+  }
+  .progresso span.feito { background: var(--laranja); }
+  .escuro-ativo .progresso span { background: rgba(255, 255, 255, .25); }
+  .escuro-ativo .progresso span.feito { background: var(--amarelo); }
+
+  /* ---------- páginas ---------- */
+  .trilho {
+    display: flex; height: 100%;
+    overflow-x: auto; scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; scrollbar-width: none;
+  }
+  .trilho::-webkit-scrollbar { display: none; }
+  .pagina {
+    flex: 0 0 100%; height: 100%;
+    scroll-snap-align: start;
+    position: relative; overflow: hidden;
+    padding: 13cqw 8cqw 10cqw;
+    display: flex; flex-direction: column;
+  }
+  .escura { background: var(--azul-esc); color: #fff; }
+  .azul { background: var(--azul); color: #fff; }
+
+  h1, h2 { font-family: var(--titulo); font-weight: 800; letter-spacing: -.02em; line-height: 1.02; }
+  h2 { font-size: 10.5cqw; }
+  p { font-size: 4.6cqw; line-height: 1.4; }
+  .etiqueta {
+    align-self: flex-start;
+    font-weight: 700; font-size: 3.4cqw; letter-spacing: .08em; text-transform: uppercase;
+    padding: 1.6cqw 3.4cqw; border-radius: 10cqw;
+    background: var(--azul-cl); color: var(--azul);
+  }
+  .escura .etiqueta, .azul .etiqueta { background: rgba(255, 255, 255, .14); color: var(--amarelo); }
+  .destaque { color: var(--laranja); }
+  .escura .destaque, .azul .destaque { color: var(--amarelo); }
+  .pequeno { font-size: 3.4cqw; opacity: .7; }
+  .preencher {
+    display: inline-block; background: #FFE9A8; color: #7A4B00;
+    border: .5cqw dashed #E0A100; border-radius: 2cqw;
+    padding: 1.2cqw 2.6cqw; font-size: 3.4cqw; font-weight: 700;
+  }
+  .foto {
+    border-radius: 5cqw;
+    display: grid; place-items: center; text-align: center;
+    font-size: 3.2cqw; color: rgba(255, 255, 255, .85);
+    padding: 4cqw;
+    background:
+      repeating-linear-gradient(135deg, rgba(255,255,255,.06) 0 3cqw, transparent 3cqw 6cqw),
+      linear-gradient(160deg, #2B6BE0, #0E3A8A);
+  }
+  .dica {
+    margin-top: auto; align-self: center;
+    font-size: 3.4cqw; opacity: .75;
+    animation: balanca 1.6s ease-in-out infinite;
+  }
+  @keyframes balanca { 50% { transform: translateX(2cqw); } }
+
+  /* 1. capa */
+  .capa .anel {
+    position: absolute; width: 120cqw; height: 120cqw; right: -48cqw; top: 22cqw;
+    border-radius: 50%; border: 16cqw solid var(--azul);
+    opacity: .95;
+  }
+  .capa .anel2 {
+    position: absolute; width: 40cqw; height: 40cqw; left: -14cqw; bottom: 30cqw;
+    border-radius: 50%; background: var(--amarelo); opacity: .9;
+  }
+  .capa h1 { font-size: 17cqw; margin-top: 8cqw; position: relative; }
+  .capa .frase { position: relative; margin-top: 5cqw; font-size: 5.4cqw; max-width: 80%; font-weight: 500; }
+  .capa .info {
+    position: relative; margin-top: auto;
+    background: #fff; color: var(--tinta);
+    border-radius: 5cqw; padding: 5cqw;
+    box-shadow: 0 3cqw 8cqw rgba(0, 0, 0, .25);
+  }
+  .capa .info b { font-family: var(--titulo); font-size: 6cqw; display: block; }
+  .capa .info p { font-size: 4cqw; color: var(--cinza); margin-top: 1cqw; }
+
+  /* 2. gancho */
+  .gancho { justify-content: center; }
+  .gancho .foto { height: 48cqw; margin-bottom: 9cqw; }
+  .gancho h2 { font-size: 13cqw; }
+  .gancho h2 + h2 { margin-top: 3cqw; }
+  .gancho p { margin-top: 7cqw; font-size: 4.8cqw; opacity: .85; }
+
+  /* 3. problema */
+  .orgaos { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5cqw; margin-top: 7cqw; }
+  .orgao {
+    background: #fff; border-radius: 5cqw; padding: 5cqw 4cqw;
+    box-shadow: 0 1.5cqw 5cqw rgba(19, 32, 58, .08);
+  }
+  .orgao .ico { font-size: 9cqw; line-height: 1; }
+  .orgao b { display: block; font-family: var(--titulo); font-size: 5.6cqw; margin-top: 2.5cqw; }
+  .orgao span { font-size: 3.6cqw; color: var(--cinza); }
+  .problema .rodape { margin-top: auto; display: grid; gap: 3cqw; }
+  .problema .rodape p { font-family: var(--titulo); font-weight: 700; font-size: 6.2cqw; line-height: 1.15; }
+
+  /* 4. solução */
+  .fichas { margin-top: 8cqw; display: grid; gap: 3cqw; }
+  .ficha {
+    display: flex; gap: 4cqw; align-items: center;
+    background: rgba(255, 255, 255, .1); border-radius: 4.5cqw; padding: 4cqw 4.5cqw;
+  }
+  .ficha .ico { font-size: 8cqw; }
+  .ficha small { display: block; font-size: 3.2cqw; text-transform: uppercase; letter-spacing: .08em; color: var(--amarelo); font-weight: 700; }
+  .ficha b { font-size: 4.8cqw; font-weight: 500; }
+  .ficha.gratis { background: var(--amarelo); color: var(--azul-esc); }
+  .ficha.gratis small { color: var(--azul-esc); opacity: .7; }
+  .ficha.gratis b { font-family: var(--titulo); font-weight: 800; font-size: 6cqw; }
+
+  /* 5. jornada */
+  .trilha { margin-top: 8cqw; position: relative; display: grid; gap: 6cqw; }
+  .trilha::before {
+    content: ""; position: absolute; left: 5.5cqw; top: 4cqw; bottom: 4cqw;
+    border-left: .9cqw dashed var(--laranja);
+  }
+  .passo { display: flex; gap: 4cqw; align-items: center; position: relative; }
+  .passo i {
+    flex: 0 0 11cqw; height: 11cqw; border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--azul); color: #fff; font-style: normal;
+    font-family: var(--titulo); font-weight: 800; font-size: 5cqw;
+    box-shadow: 0 0 0 1.6cqw var(--creme);
+  }
+  .passo:last-child i { background: var(--laranja); }
+  .passo b { font-family: var(--titulo); font-size: 5.2cqw; display: block; }
+  .passo span { font-size: 3.6cqw; color: var(--cinza); }
+
+  /* 6. impacto */
+  .numeros { display: grid; grid-template-columns: 1fr 1fr; gap: 6cqw 4cqw; margin-top: 8cqw; }
+  .numero b { font-family: var(--titulo); font-weight: 800; font-size: 17cqw; line-height: .9; display: block; color: var(--amarelo); }
+  .numero span { font-size: 4cqw; opacity: .9; }
+  .parceiros { margin-top: auto; }
+  .parceiros p { font-size: 3.6cqw; opacity: .8; margin-bottom: 3cqw; }
+  .logos { display: flex; flex-wrap: wrap; gap: 2.4cqw; }
+  .logos span {
+    border: .4cqw dashed rgba(255, 255, 255, .45); border-radius: 3cqw;
+    padding: 2.2cqw 3.4cqw; font-size: 3.3cqw; font-weight: 700;
+  }
+  .voluntario {
+    margin-top: 7cqw; padding: 4cqw 4.5cqw; border-radius: 4cqw;
+    background: rgba(255, 255, 255, .12); font-size: 4.4cqw;
+  }
+
+  /* 7. cardápio de apoio */
+  .cardapio { display: grid; gap: 3cqw; margin-top: 4.5cqw; }
+  .item {
+    display: flex; gap: 3.6cqw; align-items: center;
+    background: #fff; border-radius: 4.5cqw; padding: 3.6cqw 4cqw;
+    box-shadow: 0 1.5cqw 4cqw rgba(19, 32, 58, .07);
+  }
+  .item .ico { font-size: 7.5cqw; flex: 0 0 auto; }
+  .item b { font-family: var(--titulo); font-size: 4.8cqw; display: block; }
+  .item span { font-size: 3.5cqw; color: var(--cinza); }
+  .grade { display: grid; grid-template-columns: 1fr 1fr; gap: 3cqw; }
+  .grade .item { flex-direction: column; align-items: flex-start; gap: .6cqw; padding: 3.4cqw 4cqw; }
+  .grade .item .ico { font-size: 7cqw; }
+  .item.principal {
+    background: var(--laranja); color: #fff; padding: 5.5cqw 5cqw;
+    flex-direction: column; align-items: flex-start; gap: 2cqw;
+    box-shadow: 0 3cqw 7cqw rgba(255, 122, 47, .35);
+  }
+  .item.principal .selo {
+    font-size: 3cqw; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+    background: rgba(255, 255, 255, .22); padding: 1.2cqw 2.6cqw; border-radius: 10cqw;
+  }
+  .item.principal b { font-size: 6cqw; line-height: 1.05; }
+  .item.principal span { color: #fff; font-size: 4cqw; }
+
+  /* 8. contrapartidas */
+  .camisa { margin: 4cqw auto 0; width: 62cqw; }
+  .ganhos { display: grid; gap: 3cqw; margin-top: auto; }
+  .ganho { display: flex; gap: 3.6cqw; align-items: center; font-size: 4.4cqw; }
+  .ganho .ico {
+    flex: 0 0 11cqw; height: 11cqw; border-radius: 3.5cqw;
+    display: grid; place-items: center; font-size: 6cqw;
+    background: var(--azul-cl);
+  }
+
+  /* 9. encerramento */
+  .final .degraus { display: grid; gap: 3.6cqw; margin-top: 7cqw; }
+  .degrau { display: flex; gap: 4cqw; align-items: center; font-size: 4.8cqw; }
+  .degrau i {
+    flex: 0 0 10cqw; height: 10cqw; border-radius: 50%;
+    display: grid; place-items: center; font-style: normal;
+    background: var(--amarelo); color: var(--azul-esc);
+    font-family: var(--titulo); font-weight: 800; font-size: 5cqw;
+  }
+  .impacto {
+    margin: auto 0; font-family: var(--titulo); font-weight: 700;
+    font-size: 7.4cqw; line-height: 1.15;
+    border-left: 1.4cqw solid var(--amarelo); padding-left: 5cqw;
+  }
+  .botao {
+    display: flex; align-items: center; justify-content: center; gap: 3cqw;
+    background: #25D366; color: #fff; text-decoration: none;
+    font-family: var(--titulo); font-weight: 800; font-size: 7cqw;
+    padding: 5.5cqw; border-radius: 5cqw;
+    box-shadow: 0 3cqw 8cqw rgba(37, 211, 102, .35);
+    animation: pulsa 2.2s ease-in-out infinite;
+  }
+  @keyframes pulsa { 50% { transform: scale(1.03); } }
+  .contato { text-align: center; margin-top: 4cqw; }
+  .contato b { display: block; font-size: 5cqw; }
+  .contato span { font-size: 3.8cqw; opacity: .8; }
+
+  /* no celular de verdade: ocupa a tela toda */
+  @media (max-width: 600px) {
+    body { padding: 0; background: var(--azul-esc); }
+    .palco { gap: 0; }
+    .seta, .legenda { display: none; }
+    .aparelho { height: 100dvh; width: 100vw; aspect-ratio: auto; border-radius: 0; box-shadow: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .dica, .botao { animation: none; }
+    .trilho { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="palco">
+  <button class="seta" id="voltar" aria-label="Página anterior">←</button>
+
+  <div class="aparelho" id="aparelho">
+    <div class="progresso" id="progresso"></div>
+
+    <main class="trilho" id="trilho">
+
+      <!-- 1. Capa -->
+      <section class="pagina capa">
+        <div class="anel"></div>
+        <div class="anel2"></div>
+        <span class="etiqueta">14 de novembro · Dia Mundial do Diabetes</span>
+        <h1>Mutirão<br>do <span class="destaque">Diabetes</span></h1>
+        <p class="frase">Um dia para descobrir cedo. Uma vida inteira para se cuidar.</p>
+        <div class="info">
+          <b>Sábado, 14/11 · 8h às 14h</b>
+          <p>Ong Inaê · Cidade Universitária, Maceió</p>
+        </div>
+        <p class="dica" style="color:var(--azul-esc)">Arraste para o lado →</p>
+      </section>
+
+      <!-- 2. Gancho -->
+      <section class="pagina escura gancho" data-escura>
+        <div class="foto">Foto aqui: senhora sorrindo em uma tenda de saúde</div>
+        <h2>Ela não sentia nada.</h2>
+        <h2 class="destaque">A glicemia dizia outra coisa.</h2>
+        <p>Descobrir cedo é o que evita a perda da visão e a amputação.</p>
+        <p class="pequeno" style="margin-top:auto">Pessoa ilustrativa.</p>
+      </section>
+
+      <!-- 3. O problema -->
+      <section class="pagina problema">
+        <span class="etiqueta">O problema</span>
+        <h2 style="margin-top:4cqw">O diabetes é <span class="destaque">silencioso.</span></h2>
+        <div class="orgaos">
+          <div class="orgao"><div class="ico">👁️</div><b>Olhos</b><span>pode levar à cegueira</span></div>
+          <div class="orgao"><div class="ico">🦶</div><b>Pés</b><span>feridas e amputação</span></div>
+          <div class="orgao"><div class="ico">🫘</div><b>Rins</b><span>doença renal</span></div>
+          <div class="orgao"><div class="ico">❤️</div><b>Coração</b><span>infarto e AVC</span></div>
+        </div>
+        <div class="rodape">
+          <p>Descobrir cedo protege tudo isso.</p>
+          <span class="preencher">[DADO + FONTE]</span>
+        </div>
+      </section>
+
+      <!-- 4. A solução -->
+      <section class="pagina azul" data-escura>
+        <span class="etiqueta">A solução</span>
+        <h2 style="margin-top:4cqw">Um dia.<br>Um lugar.<br><span class="destaque">Cuidado completo.</span></h2>
+        <div class="fichas">
+          <div class="ficha"><span class="ico">📅</span><div><small>Quando</small><b>Sábado, 14/11, das 8h às 14h</b></div></div>
+          <div class="ficha"><span class="ico">📍</span><div><small>Onde</small><b>Ong Inaê, Rua São Pedro, 10, Maceió</b></div></div>
+          <div class="ficha"><span class="ico">🤝</span><div><small>Para quem</small><b>Toda a comunidade, com ou sem diabetes</b></div></div>
+          <div class="ficha gratis"><span class="ico">💛</span><div><small>Quanto custa</small><b>Nada. É gratuito.</b></div></div>
+        </div>
+      </section>
+
+      <!-- 5. Jornada -->
+      <section class="pagina">
+        <span class="etiqueta">A jornada</span>
+        <h2 style="margin-top:4cqw">Entra. É cuidado. <span class="destaque">Sai orientado.</span></h2>
+        <div class="trilha">
+          <div class="passo"><i>1</i><div><b>Acolhimento</b><span>glicemia, pressão e peso</span></div></div>
+          <div class="passo"><i>2</i><div><b>Olhos</b><span>exame do fundo de olho</span></div></div>
+          <div class="passo"><i>3</i><div><b>Pés</b><span>sensibilidade e circulação</span></div></div>
+          <div class="passo"><i>4</i><div><b>Circuito de cuidado</b><span>nutrição, psicologia, farmácia e mais</span></div></div>
+          <div class="passo"><i>5</i><div><b>Movimento</b><span>dança, yoga e alongamento</span></div></div>
+          <div class="passo"><i>6</i><div><b>Encaminhamento</b><span>segue cuidado na rede pública</span></div></div>
+        </div>
+      </section>
+
+      <!-- 6. Impacto -->
+      <section class="pagina escura" data-escura>
+        <span class="etiqueta">Quem está junto</span>
+        <h2 style="margin-top:4cqw">Uma rede <span class="destaque">inteira</span> de cuidado.</h2>
+        <div class="numeros">
+          <div class="numero"><b>200</b><span>pessoas atendidas</span></div>
+          <div class="numero"><b>40</b><span>voluntários</span></div>
+          <div class="numero"><b>~20</b><span>estações de cuidado</span></div>
+          <div class="numero"><b>6h</b><span>de atendimento</span></div>
+        </div>
+        <p class="voluntario">💙 100% voluntário. Ninguém recebe para estar lá.</p>
+        <div class="parceiros">
+          <p>Com estudantes e profissionais de:</p>
+          <div class="logos">
+            <span>logo UFAL</span><span>logo CESMAC</span><span>logo UNIMA/Afya</span><span>logo Ong Inaê</span><span>ligas acadêmicas</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Cardápio de apoio -->
+      <section class="pagina">
+        <span class="etiqueta">Cardápio de apoio</span>
+        <h2 style="margin-top:4cqw">Escolha <span class="destaque">como</span> ajudar.</h2>
+        <div class="cardapio">
+          <div class="item principal">
+            <span class="selo">⭐ Mais precisamos</span>
+            <b>🍽️ Quem cuida também precisa de cuidado</b>
+            <span>40 voluntários das 8h às 14h. Lanches, frutas e água mantêm a equipe de pé.</span>
+          </div>
+          <div class="grade">
+            <div class="item"><span class="ico">💧</span><b>Água</b><span>para 200 participantes</span></div>
+            <div class="item"><span class="ico">⛺</span><b>Estrutura</b><span>tendas, mesas, cadeiras e som</span></div>
+            <div class="item"><span class="ico">👕</span><b>Gráfica</b><span>camisas, banners e placas</span></div>
+            <div class="item"><span class="ico">🩺</span><b>Insumos</b><span>fitas de glicemia, luvas e álcool</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. O que você recebe -->
+      <section class="pagina">
+        <span class="etiqueta">Você recebe</span>
+        <h2 style="margin-top:4cqw">Sua marca <span class="destaque">do lado</span> de quem cuida.</h2>
+        <svg class="camisa" viewBox="0 0 200 170" role="img" aria-label="Camisa da equipe com espaço para a logo do apoiador">
+          <path d="M60 10 L30 22 L5 55 L30 72 L42 58 L42 160 L158 160 L158 58 L170 72 L195 55 L170 22 L140 10 Q100 34 60 10 Z" fill="#1652C8"/>
+          <path d="M60 10 Q100 34 140 10" fill="none" stroke="#0A2350" stroke-width="4"/>
+          <text x="100" y="78" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="15" fill="#fff">MUTIRÃO DO</text>
+          <text x="100" y="96" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="15" fill="#FFC845">DIABETES</text>
+          <rect x="64" y="114" width="72" height="30" rx="6" fill="#fff" stroke="#FF7A2F" stroke-width="2.5" stroke-dasharray="5 4"/>
+          <text x="100" y="134" text-anchor="middle" font-family="DM Sans, sans-serif" font-weight="700" font-size="11" fill="#FF7A2F">SUA MARCA</text>
+        </svg>
+        <div class="ganhos">
+          <div class="ganho"><span class="ico">👕</span>Logo nas camisas e nos banners</div>
+          <div class="ganho"><span class="ico">📱</span>Agradecimento nas redes sociais</div>
+          <div class="ganho"><span class="ico">📜</span>Certificado de apoio</div>
+        </div>
+      </section>
+
+      <!-- 9. Encerramento -->
+      <section class="pagina azul final" data-escura>
+        <span class="etiqueta">Vamos juntos?</span>
+        <h2 style="margin-top:4cqw">Apoiar é <span class="destaque">simples.</span></h2>
+        <div class="degraus">
+          <div class="degrau"><i>1</i>Escolha o que doar</div>
+          <div class="degrau"><i>2</i>Chame o Edilson no WhatsApp</div>
+          <div class="degrau"><i>3</i>Entregue até a data combinada</div>
+        </div>
+        <p class="impacto">Cada lanche, cada garrafa d'água, cada camisa <span class="destaque">vira cuidado</span> para alguém.</p>
+        <a class="botao" href="https://wa.me/558287908792" target="_blank" rel="noopener">💬 Quero apoiar</a>
+        <div class="contato">
+          <b>Edilson Farias · (82) 8790-8792</b>
+          <span>Comissão de Financeiro e Captação</span>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <button class="seta" id="avancar" aria-label="Próxima página">→</button>
+</div>
+
+<p class="legenda">Prévia · arraste, use as setas ou as teclas ← →</p>
+
+<script>
+  const trilho = document.getElementById('trilho');
+  const paginas = [...trilho.children];
+  const progresso = document.getElementById('progresso');
+  const aparelho = document.getElementById('aparelho');
+  const voltar = document.getElementById('voltar');
+  const avancar = document.getElementById('avancar');
+
+  paginas.forEach(() => progresso.appendChild(document.createElement('span')));
+  const barras = [...progresso.children];
+
+  function atual() {
+    return Math.round(trilho.scrollLeft / trilho.clientWidth);
+  }
+  function irPara(i) {
+    i = Math.max(0, Math.min(paginas.length - 1, i));
+    trilho.scrollTo({ left: i * trilho.clientWidth });
+  }
+  function atualizar() {
+    const i = atual();
+    barras.forEach((b, n) => b.classList.toggle('feito', n <= i));
+    aparelho.classList.toggle('escuro-ativo', paginas[i].hasAttribute('data-escura') && i !== 0);
+    voltar.disabled = i === 0;
+    avancar.disabled = i === paginas.length - 1;
+  }
+
+  trilho.addEventListener('scroll', () => requestAnimationFrame(atualizar));
+  voltar.addEventListener('click', () => irPara(atual() - 1));
+  avancar.addEventListener('click', () => irPara(atual() + 1));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') irPara(atual() + 1);
+    if (e.key === 'ArrowLeft') irPara(atual() - 1);
+  });
+  // abre direto numa página: index.html#5
+  const inicial = parseInt(location.hash.slice(1), 10);
+  if (inicial > 1) {
+    trilho.style.scrollBehavior = 'auto';
+    trilho.scrollLeft = (inicial - 1) * trilho.clientWidth;
+    trilho.style.scrollBehavior = '';
+  }
+  atualizar();
+</script>
+</body>
+</html>
