@@ -68,7 +68,7 @@ Tom e estilo:
 - Varie o layout de página para página (foto inteira, cartões, linha do tempo, número gigante) para não ficar repetitivo.
 
 Restrições:
-- Use apenas os dados deste prompt. Se quiser uma estatística de diabetes para a página do problema, deixe o campo [DADO + FONTE] em vez de inventar um número, porque um dado errado tira a credibilidade diante do patrocinador.
+- Use apenas os dados deste prompt. Não coloque estatísticas de diabetes, porque um dado errado tira a credibilidade diante do patrocinador.
 - Não prometa contrapartidas além das duas listadas (não ofereça certificado).
 - Não peça dinheiro em espécie: o pedido é de bens, produtos e serviços.
 - Use logos apenas como espaços reservados ("logo do parceiro aqui"), porque as marcas precisam de autorização.
@@ -86,7 +86,7 @@ Texto: "Quem cuida também precisa de cuidado: são 40 voluntários das 8h às 1
 </exemplo>
 <exemplo tipo="bom">
 Página de gancho:
-Foto de um senhor fazendo o exame de retinografia com um aparelho acoplado ao celular (usar a imagem fornecida pela equipe).
+Foto de um senhor fazendo o exame de retinografia com um aparelho acoplado ao celular (usar a imagem fornecida pela equipe), com "Imagem ilustrativa" logo abaixo da foto.
 Texto grande: "Ele não sentia nada. A glicemia dizia outra coisa."
 Linha pequena: "Descobrir cedo é o que evita a perda da visão e a amputação."
 </exemplo>
@@ -104,7 +104,6 @@ Antes de desenhar, defina em uma frase a emoção de cada página (curiosidade, 
 Entregue uma apresentação em formato vertical de celular (9:16, 1080 × 1920 px), de 8 a 10 páginas, com:
 - Título curto em cada página.
 - Conteúdo dentro da área central segura, com margem nas bordas, para nada ser cortado na tela do celular.
-- Campos [DADO + FONTE], se houver, destacados em cor diferente, para serem fáceis de achar e substituir.
 - Pronta para exportar para o Canva (ou em PDF/PPTX para importar no Canva), de onde será enviada como link.
 - Notas curtas por página (1 a 2 frases) com o que dizer, caso alguém apresente ao vivo; a página nunca depende delas para ser entendida.
 </formato_de_resposta>
@@ -116,7 +115,7 @@ Antes de finalizar, confira:
 - Nenhuma página parece um documento: nenhuma tem parágrafo longo, e há ao menos 4 estilos de layout diferentes.
 - A alimentação da equipe aparece com destaque.
 - As duas contrapartidas aparecem, e nenhuma outra foi prometida.
-- Nenhum número, estatística ou nome foi inventado; estatística sem fonte aparece como [DADO + FONTE].
+- Nenhum número, estatística ou nome foi inventado.
 - A última página tem uma chamada para ação clara, o botão "Entre em contato" e nenhum nome ou telefone escrito.
 Se algum item falhar, ajuste antes de entregar.
 </autoavaliacao>
