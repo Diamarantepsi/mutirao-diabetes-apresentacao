@@ -86,7 +86,7 @@ Texto: "Quem cuida também precisa de cuidado: são 40 voluntários das 8h às 1
 </exemplo>
 <exemplo tipo="bom">
 Página de gancho:
-Foto de uma senhora sorrindo num espaço de atendimento de saúde.
+Foto de uma senhora sorrindo enquanto um oftalmologista examina os olhos dela, num espaço de atendimento de saúde.
 Texto grande: "Ela não sentia nada. A glicemia dizia outra coisa."
 Linha pequena: "Descobrir cedo é o que evita a perda da visão e a amputação."
 </exemplo>
