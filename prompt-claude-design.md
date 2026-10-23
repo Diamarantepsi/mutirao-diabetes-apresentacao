@@ -5,9 +5,9 @@ Você é designer de apresentações e redator de captação para projetos socia
 <contexto>
 Projeto: Mutirão do Diabetes, um dia de cuidado gratuito para a comunidade, no próprio Dia Mundial do Diabetes: sábado, 14 de novembro de 2026, das 8h às 14h. Em 2026 a campanha da Organização Mundial da Saúde tem o tema "Early action on diabetes" (agir cedo no diabetes).
 
-Local: sede do Centro de Formação e Inclusão Social INAÊ (Ong Inaê), Rua São Pedro, 10, Cidade Universitária, Maceió/AL. A Inaê atua há mais de 25 anos com formação profissional de jovens e mulheres, cultura afro-brasileira e atendimento de saúde (projeto Inaê Saúde). Instagram: @onginae.
+Local: sede do Centro de Formação e Inclusão Social INAÊ (Ong Inaê), Rua São Pedro, 10, Cidade Universitária, Maceió/AL. É um espaço fechado e coberto (não use tendas nem cenas ao ar livre). A Inaê atua há mais de 25 anos com formação profissional de jovens e mulheres, cultura afro-brasileira e atendimento de saúde (projeto Inaê Saúde). Instagram: @onginae.
 
-Quem faz: estudantes e profissionais voluntários de várias instituições, entre elas Universidade Federal de Alagoas (UFAL), CESMAC, UNIMA/Afya, o Laboratório de Inovação Digital e Análises de Dados em Saúde, ligas acadêmicas, grupos de pesquisa e projetos de extensão, com apoio dos Agentes Comunitários de Saúde na mobilização. A organização tem 9 comissões de voluntários (coordenação, articulação institucional, logística, assistência e fluxo, biossegurança, registro e dados, comunicação, financeiro e captação, voluntários e escalas). Ninguém recebe pagamento: o projeto não tem custo para quem o constrói, e depende de apoiadores que doam bens e serviços.
+Quem faz: estudantes e profissionais voluntários de várias instituições, entre elas Universidade Federal de Alagoas (UFAL), o Laboratório de Inovação Digital e Análises de Dados em Saúde, ligas acadêmicas, grupos de pesquisa e projetos de extensão, com apoio dos Agentes Comunitários de Saúde na mobilização. A organização tem 9 comissões de voluntários (coordenação, articulação institucional, logística, assistência e fluxo, biossegurança, registro e dados, comunicação, financeiro e captação, voluntários e escalas). Ninguém recebe pagamento: o projeto não tem custo para quem o constrói, e depende de apoiadores que doam bens e serviços.
 
 Para quem: pessoas com diabetes, pessoas com fatores de risco, moradores da comunidade e quem passar pelo local. Entrada livre ou por convite dos Agentes Comunitários de Saúde.
 
@@ -29,7 +29,6 @@ Números do projeto:
 O que o projeto precisa receber (bens, nunca dinheiro para pessoas):
 - Comida para a equipe (o principal)
 - Água
-- Tendas
 - Camisas
 - Insumos e materiais
 Mostre só esses nomes, sem detalhar itens (marcas, tipos de fita, quantidades), porque parte disso pode vir da Secretaria Municipal de Saúde e a lista ainda vai mudar.
@@ -55,7 +54,7 @@ Sequência sugerida (de 8 a 10 páginas; quanto mais curta, mais gente chega ao 
 4. A solução: o que é o mutirão, onde, quando e para quem.
 5. A jornada do participante: um percurso visual de cima para baixo (trilha vertical) com as 6 etapas, mostrando que a pessoa entra, é cuidada e sai orientada.
 6. Quem está junto e o impacto: números grandes (200 pessoas esperadas, 40 voluntários, 6 horas de cuidado, R$ 0 para quem é atendido) e as instituições parceiras. Passe a ideia de rede forte e organizada, 100% voluntária.
-7. O que você pode doar: um "cardápio de apoio" em cartões (comida para a equipe, água, tendas, camisas, insumos e materiais), só com os nomes. Destaque a alimentação da equipe, porque é a necessidade mais fácil de atender e a que mais faz falta no dia.
+7. O que você pode doar: um "cardápio de apoio" em cartões (comida para a equipe, água, camisas, insumos e materiais), só com os nomes. Destaque a alimentação da equipe, porque é a necessidade mais fácil de atender e a que mais faz falta no dia.
 8. O que você recebe: logo nas camisas e banners e menção nas redes. Mostre um mockup de camisa ou banner com o espaço da marca.
 9. Encerramento: direto e curto. "Quer fazer parte disso?", um botão grande "Entre em contato" que abre o WhatsApp pelo link https://wa.me/558287908792, e logo abaixo "A gente te explica tudo." Sem nome, sem número escrito e sem passo a passo.
 
@@ -87,7 +86,7 @@ Texto: "Quem cuida também precisa de cuidado: são 40 voluntários das 8h às 1
 </exemplo>
 <exemplo tipo="bom">
 Página de gancho:
-Foto de uma senhora sorrindo em uma tenda de saúde.
+Foto de uma senhora sorrindo num espaço de atendimento de saúde.
 Texto grande: "Ela não sentia nada. A glicemia dizia outra coisa."
 Linha pequena: "Descobrir cedo é o que evita a perda da visão e a amputação."
 </exemplo>
