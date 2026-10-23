@@ -22,7 +22,7 @@ A jornada do participante no dia (use como fio visual da apresentação):
 Por que isso importa (mensagem central): o diabetes muitas vezes não dá sinais no começo. Quem descobre cedo consegue evitar complicações nos olhos, nos pés, nos rins e no coração. O mutirão leva esse cuidado para perto de quem mais precisa, em um único dia e num único lugar.
 
 Números do projeto:
-- Público esperado: 200 pessoas atendidas
+- Público esperado: 200 pessoas (é uma expectativa, não um número garantido; apresente sempre como "esperadas", "meta" ou "expectativa")
 - Voluntários: 40
 - Data e horário: sábado, 14 de novembro de 2026, das 8h às 14h (6 horas de atendimento)
 - Número de estações: cerca de 20 entre avaliações e circuito de cuidado
@@ -56,7 +56,7 @@ Sequência sugerida (de 8 a 10 páginas; quanto mais curta, mais gente chega ao 
 3. O problema: o diabetes pode ser silencioso, e descobrir cedo muda tudo. Ligue isso aos olhos, aos pés, aos rins e ao coração com ícones.
 4. A solução: o que é o mutirão, onde, quando e para quem.
 5. A jornada do participante: um percurso visual de cima para baixo (trilha vertical) com as 6 etapas, mostrando que a pessoa entra, é cuidada e sai orientada.
-6. Quem está junto e o impacto: números grandes (200 pessoas, 40 voluntários, cerca de 20 estações, 6 horas de cuidado) e as instituições parceiras. Passe a ideia de rede forte e organizada, 100% voluntária.
+6. Quem está junto e o impacto: números grandes (200 pessoas esperadas, 40 voluntários, cerca de 20 estações, 6 horas de cuidado) e as instituições parceiras. Passe a ideia de rede forte e organizada, 100% voluntária.
 7. O que você pode doar: um "cardápio de apoio" em cartões empilhados por categoria (alimentação da equipe, água, estrutura, gráfica, insumos de saúde). Destaque a alimentação da equipe, porque é a necessidade mais fácil de atender e a que mais faz falta no dia.
 8. O que você recebe: logo nas camisas e banners, menção nas redes e certificado de apoio. Mostre um mockup de camisa ou banner com o espaço da marca.
 9. Encerramento: "Como apoiar em 3 passos" (escolha o que doar, chame o Edilson no WhatsApp, entregue até a data combinada), com um botão grande "Quero apoiar" que abre o WhatsApp pelo link https://wa.me/558287908792 e o número escrito por extenso logo abaixo.

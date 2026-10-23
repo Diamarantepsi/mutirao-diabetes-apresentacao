@@ -9,7 +9,7 @@ Abra no celular e arraste para o lado. No computador, use as setas.
 ## O que avaliar
 - O texto está claro para quem nunca ouviu falar do projeto?
 - A lista do que doar está certa? Falta ou sobra algum item?
-- Os números (200 pessoas, 40 voluntários, 14/11, 8h às 14h) estão corretos?
+- Os números (expectativa de 200 pessoas, 40 voluntários, 14/11, 8h às 14h) estão corretos?
 - O botão "Quero apoiar" abre o WhatsApp certo?
 
 ## Arquivos

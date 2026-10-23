@@ -145,6 +145,8 @@
   /* 2. gancho */
   .gancho { justify-content: center; }
   .gancho .foto { height: 48cqw; margin-bottom: 9cqw; }
+  .foto.ilustracao { padding: 0; overflow: hidden; }
+  .foto.ilustracao svg { width: 100%; height: 100%; display: block; }
   .gancho h2 { font-size: 13cqw; }
   .gancho h2 + h2 { margin-top: 3cqw; }
   .gancho p { margin-top: 7cqw; font-size: 4.8cqw; opacity: .85; }
@@ -309,7 +311,42 @@
 
       <!-- 2. Gancho -->
       <section class="pagina escura gancho" data-escura>
-        <div class="foto">Foto aqui: senhora sorrindo em uma tenda de saúde</div>
+        <div class="foto ilustracao">
+          <svg viewBox="0 0 350 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustração: senhora sorrindo em uma tenda de saúde">
+            <defs><linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B7BEA"/><stop offset="1" stop-color="#0E3A8A"/></linearGradient></defs>
+            <rect width="350" height="200" fill="url(#ceu)"/>
+            <circle cx="290" cy="80" r="50" fill="#FFC845" opacity=".18"/>
+            <rect x="14" y="34" width="6" height="166" fill="#0A2350" opacity=".6"/>
+            <rect x="330" y="34" width="6" height="166" fill="#0A2350" opacity=".6"/>
+            <rect width="350" height="34" fill="#fff"/><rect x="0" width="25" height="34" fill="#FF7A2F"/><rect x="50" width="25" height="34" fill="#FF7A2F"/><rect x="100" width="25" height="34" fill="#FF7A2F"/><rect x="150" width="25" height="34" fill="#FF7A2F"/><rect x="200" width="25" height="34" fill="#FF7A2F"/><rect x="250" width="25" height="34" fill="#FF7A2F"/><rect x="300" width="25" height="34" fill="#FF7A2F"/><circle cx="12.5" cy="34" r="12.5" fill="#FF7A2F"/><circle cx="37.5" cy="34" r="12.5" fill="#fff"/><circle cx="62.5" cy="34" r="12.5" fill="#FF7A2F"/><circle cx="87.5" cy="34" r="12.5" fill="#fff"/><circle cx="112.5" cy="34" r="12.5" fill="#FF7A2F"/><circle cx="137.5" cy="34" r="12.5" fill="#fff"/><circle cx="162.5" cy="34" r="12.5" fill="#FF7A2F"/><circle cx="187.5" cy="34" r="12.5" fill="#fff"/><circle cx="212.5" cy="34" r="12.5" fill="#FF7A2F"/><circle cx="237.5" cy="34" r="12.5" fill="#fff"/><circle cx="262.5" cy="34" r="12.5" fill="#FF7A2F"/><circle cx="287.5" cy="34" r="12.5" fill="#fff"/><circle cx="312.5" cy="34" r="12.5" fill="#FF7A2F"/><circle cx="337.5" cy="34" r="12.5" fill="#fff"/>
+            <rect x="232" y="168" width="118" height="32" fill="#E7EEFC"/>
+            <rect x="232" y="164" width="118" height="6" fill="#fff"/>
+            <rect x="268" y="144" width="24" height="22" rx="4" fill="#fff" stroke="#0A2350" stroke-width="2"/>
+            <rect x="272" y="148" width="16" height="8" rx="1" fill="#9FE3B4"/>
+            <path d="M104 72 c-4 -6 -12 -2 -8 4 l8 8 l8 -8 c4 -6 -4 -10 -8 -4z" fill="#FFC845"/>
+            <path d="M246 58 c-3 -4.5 -9 -1.5 -6 3 l6 6 l6 -6 c3 -4.5 -3 -7.5 -6 -3z" fill="#FFC845" opacity=".8"/>
+            <path d="M105 200 C108 160 135 145 175 145 C215 145 242 160 245 200 Z" fill="#FF7A2F"/>
+            <rect x="163" y="122" width="24" height="26" fill="#7A4A2E"/>
+            <path d="M162 145 L175 163 L188 145 Z" fill="#7A4A2E"/>
+            <circle cx="212" cy="172" r="10" fill="#fff"/>
+            <circle cx="212" cy="172" r="6" fill="none" stroke="#1652C8" stroke-width="3.5"/>
+            <ellipse cx="175" cy="92" rx="38" ry="40" fill="#CFCFD8"/>
+            <circle cx="175" cy="52" r="16" fill="#CFCFD8"/>
+            <ellipse cx="143" cy="102" rx="6" ry="9" fill="#8D5A3B"/>
+            <ellipse cx="207" cy="102" rx="6" ry="9" fill="#8D5A3B"/>
+            <circle cx="143" cy="113" r="3" fill="#FFC845"/>
+            <circle cx="207" cy="113" r="3" fill="#FFC845"/>
+            <ellipse cx="175" cy="100" rx="31" ry="36" fill="#8D5A3B"/>
+            <path d="M144 92 C146 66 168 58 182 62 C198 66 208 78 206 94 C196 80 180 74 160 80 C152 83 147 88 144 92 Z" fill="#E4E4EA"/>
+            <circle cx="152" cy="114" r="6" fill="#FF8A8A" opacity=".35"/>
+            <circle cx="198" cy="114" r="6" fill="#FF8A8A" opacity=".35"/>
+            <path d="M156 101 Q162 95 168 101 M182 101 Q188 95 194 101" fill="none" stroke="#13203A" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="162" cy="100" r="11" fill="#fff" fill-opacity=".12" stroke="#13203A" stroke-width="2.5"/>
+            <circle cx="188" cy="100" r="11" fill="#fff" fill-opacity=".12" stroke="#13203A" stroke-width="2.5"/>
+            <path d="M173 100 Q175 97 177 100" fill="none" stroke="#13203A" stroke-width="2.5"/>
+            <path d="M162 118 Q175 134 188 118 Z" fill="#fff" stroke="#4A2A18" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <h2>Ela não sentia nada.</h2>
         <h2 class="destaque">A glicemia dizia outra coisa.</h2>
         <p>Descobrir cedo é o que evita a perda da visão e a amputação.</p>
@@ -360,10 +397,10 @@
 
       <!-- 6. Impacto -->
       <section class="pagina escura" data-escura>
-        <span class="etiqueta">Quem está junto</span>
+        <span class="etiqueta">Quem está junto · nossa meta</span>
         <h2 style="margin-top:4cqw">Uma rede <span class="destaque">inteira</span> de cuidado.</h2>
         <div class="numeros">
-          <div class="numero"><b>200</b><span>pessoas atendidas</span></div>
+          <div class="numero"><b>200</b><span>pessoas esperadas</span></div>
           <div class="numero"><b>40</b><span>voluntários</span></div>
           <div class="numero"><b>~20</b><span>estações de cuidado</span></div>
           <div class="numero"><b>6h</b><span>de atendimento</span></div>
@@ -388,7 +425,7 @@
             <span>40 voluntários das 8h às 14h. Lanches, frutas e água mantêm a equipe de pé.</span>
           </div>
           <div class="grade">
-            <div class="item"><span class="ico">💧</span><b>Água</b><span>para 200 participantes</span></div>
+            <div class="item"><span class="ico">💧</span><b>Água</b><span>para cerca de 200 participantes esperados</span></div>
             <div class="item"><span class="ico">⛺</span><b>Estrutura</b><span>tendas, mesas, cadeiras e som</span></div>
             <div class="item"><span class="ico">👕</span><b>Gráfica</b><span>camisas, banners e placas</span></div>
             <div class="item"><span class="ico">🩺</span><b>Insumos</b><span>fitas de glicemia, luvas e álcool</span></div>
