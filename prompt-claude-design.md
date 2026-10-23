@@ -15,7 +15,7 @@ A jornada do participante no dia (use como fio visual da apresentação):
 1. Acolhimento e triagem: recepção, cadastro, glicemia capilar, pressão arterial, peso e circunferência abdominal.
 2. Avaliação dos olhos: rastreamento de retinopatia diabética com retinografia (exame do fundo de olho).
 3. Avaliação dos pés: pulso, sensibilidade, inspeção e calçados; avaliação vascular.
-4. Circuito de cuidado: estações de endocrinologia, nutrição, enfermagem, angiologia, nefrologia, educação física, psicologia, farmácia, oftalmologia, "Proteja seu coração", "Conheça seu risco", educação popular em saúde, lava-pés e diabetes gestacional.
+4. Orientação em saúde: conversas educativas com diferentes áreas (como alimentação, movimento, autocuidado e uso de remédios). São orientações, não consultas nem tratamentos; não liste todas as áreas nem destaque quantas são, para não criar expectativa de muitos atendimentos.
 5. Atividade física e bem-estar: momento coletivo com dança, ginástica, alongamento e yoga, e espaço para crianças.
 6. Encaminhamento: quem tiver alteração sai orientado e encaminhado para continuar o cuidado na rede pública de saúde.
 
@@ -25,22 +25,20 @@ Números do projeto:
 - Público esperado: 200 pessoas (é uma expectativa, não um número garantido; apresente sempre como "esperadas", "meta" ou "expectativa")
 - Voluntários: 40
 - Data e horário: sábado, 14 de novembro de 2026, das 8h às 14h (6 horas de atendimento)
-- Número de estações: cerca de 20 entre avaliações e circuito de cuidado
 
 O que o projeto precisa receber (bens, nunca dinheiro para pessoas):
-- Alimentação da equipe: lanches, refeições, frutas e água para os voluntários durante o dia todo.
-- Água para os participantes.
-- Estrutura: tendas, mesas, cadeiras, som para a atividade física, extensões.
-- Gráfica: camisas da equipe, banners, placas de sinalização, fichas, certificados e materiais educativos.
-- Insumos de saúde: fitas e lancetas de glicemia, algodão, álcool, luvas, caixa de descarte de perfurocortantes, bacias e toalhas para o lava-pés.
-- Outros apoios que o parceiro quiser oferecer.
+- Comida para a equipe (o principal)
+- Água
+- Tendas
+- Camisas
+- Insumos e materiais
+Mostre só esses nomes, sem detalhar itens (marcas, tipos de fita, quantidades), porque parte disso pode vir da Secretaria Municipal de Saúde e a lista ainda vai mudar.
 
 O que o apoiador recebe em troca:
 - Logo nas camisas da equipe e nos banners do evento.
 - Menção de agradecimento nas redes sociais do projeto e dos parceiros.
-- Certificado de apoio emitido pela organização.
 
-Contato para apoiar: Edilson Farias, comissão de Financeiro e Captação, WhatsApp +55 82 8790-8792
+Contato para apoiar: o botão da última página abre o WhatsApp da comissão de captação (https://wa.me/558287908792). Não mostre nome nem número de telefone na apresentação.
 
 Público da apresentação: uma única versão que serve para qualquer apoiador (comércio local como padarias, mercados e restaurantes; farmácias e laboratórios; empresas maiores).
 
@@ -56,10 +54,10 @@ Sequência sugerida (de 8 a 10 páginas; quanto mais curta, mais gente chega ao 
 3. O problema: o diabetes pode ser silencioso, e descobrir cedo muda tudo. Ligue isso aos olhos, aos pés, aos rins e ao coração com ícones.
 4. A solução: o que é o mutirão, onde, quando e para quem.
 5. A jornada do participante: um percurso visual de cima para baixo (trilha vertical) com as 6 etapas, mostrando que a pessoa entra, é cuidada e sai orientada.
-6. Quem está junto e o impacto: números grandes (200 pessoas esperadas, 40 voluntários, cerca de 20 estações, 6 horas de cuidado) e as instituições parceiras. Passe a ideia de rede forte e organizada, 100% voluntária.
-7. O que você pode doar: um "cardápio de apoio" em cartões empilhados por categoria (alimentação da equipe, água, estrutura, gráfica, insumos de saúde). Destaque a alimentação da equipe, porque é a necessidade mais fácil de atender e a que mais faz falta no dia.
-8. O que você recebe: logo nas camisas e banners, menção nas redes e certificado de apoio. Mostre um mockup de camisa ou banner com o espaço da marca.
-9. Encerramento: "Como apoiar em 3 passos" (escolha o que doar, chame o Edilson no WhatsApp, entregue até a data combinada), com um botão grande "Quero apoiar" que abre o WhatsApp pelo link https://wa.me/558287908792 e o número escrito por extenso logo abaixo.
+6. Quem está junto e o impacto: números grandes (200 pessoas esperadas, 40 voluntários, 6 horas de cuidado, R$ 0 para quem é atendido) e as instituições parceiras. Passe a ideia de rede forte e organizada, 100% voluntária.
+7. O que você pode doar: um "cardápio de apoio" em cartões (comida para a equipe, água, tendas, camisas, insumos e materiais), só com os nomes. Destaque a alimentação da equipe, porque é a necessidade mais fácil de atender e a que mais faz falta no dia.
+8. O que você recebe: logo nas camisas e banners e menção nas redes. Mostre um mockup de camisa ou banner com o espaço da marca.
+9. Encerramento: direto e curto. "Quer fazer parte disso?", um botão grande "Entre em contato" que abre o WhatsApp pelo link https://wa.me/558287908792, e logo abaixo "A gente te explica tudo." Sem nome, sem número escrito e sem passo a passo.
 
 Tom e estilo:
 - Esperançoso, humano e direto. Fale com o apoiador como parceiro, não como "doador de caridade".
@@ -72,7 +70,7 @@ Tom e estilo:
 
 Restrições:
 - Use apenas os dados deste prompt. Se quiser uma estatística de diabetes para a página do problema, deixe o campo [DADO + FONTE] em vez de inventar um número, porque um dado errado tira a credibilidade diante do patrocinador.
-- Não prometa contrapartidas além das três listadas.
+- Não prometa contrapartidas além das duas listadas (não ofereça certificado).
 - Não peça dinheiro em espécie: o pedido é de bens, produtos e serviços.
 - Use logos apenas como espaços reservados ("logo do parceiro aqui"), porque as marcas precisam de autorização.
 - Mantenha todo texto como texto editável (nunca escrito dentro de imagem), para que a equipe consiga trocar palavras, fotos e logos depois no Canva.
@@ -83,8 +81,8 @@ Se algo estiver ambíguo, escolha a opção mais simples e visual e siga em fren
 <exemplos>
 <exemplo tipo="bom">
 Página "O que você pode doar", cartão de alimentação:
-Título: "Quem cuida também precisa de cuidado"
-Texto: "São 40 voluntários atendendo das 8h às 14h. Lanches, frutas e água mantêm a equipe de pé."
+Título: "Comida para a equipe"
+Texto: "Quem cuida também precisa de cuidado: são 40 voluntários das 8h às 14h."
 Ícone: prato com talheres.
 </exemplo>
 <exemplo tipo="bom">
@@ -118,8 +116,8 @@ Antes de finalizar, confira:
 - Todo texto é lido na tela do celular sem dar zoom.
 - Nenhuma página parece um documento: nenhuma tem parágrafo longo, e há ao menos 4 estilos de layout diferentes.
 - A alimentação da equipe aparece com destaque.
-- As três contrapartidas aparecem, e nenhuma outra foi prometida.
+- As duas contrapartidas aparecem, e nenhuma outra foi prometida.
 - Nenhum número, estatística ou nome foi inventado; estatística sem fonte aparece como [DADO + FONTE].
-- A última página tem uma chamada para ação clara e o botão que abre o WhatsApp do Edilson.
+- A última página tem uma chamada para ação clara, o botão "Entre em contato" e nenhum nome ou telefone escrito.
 Se algum item falhar, ajuste antes de entregar.
 </autoavaliacao>
