@@ -145,7 +145,7 @@
   /* 2. gancho */
   .gancho { justify-content: center; }
   .gancho .foto { height: 48cqw; }
-  .legenda-foto { margin: 2cqw 0 8cqw; }
+  .gancho .foto { margin-bottom: 8cqw; }
   .foto.ilustracao { padding: 0; overflow: hidden; }
   .foto.ilustracao img { width: 100%; height: 100%; display: block; object-fit: cover; }
   .gancho h2 { font-size: 13cqw; }
@@ -202,10 +202,8 @@
   .parceiros { margin-top: auto; }
   .parceiros p { font-size: 3.6cqw; opacity: .8; margin-bottom: 3cqw; }
   .logos { display: flex; flex-wrap: wrap; gap: 2.4cqw; }
-  .logos span {
-    border: .4cqw dashed rgba(255, 255, 255, .45); border-radius: 3cqw;
-    padding: 2.2cqw 3.4cqw; font-size: 3.3cqw; font-weight: 700;
-  }
+  .logos img { height: 18cqw; border-radius: 3cqw; }
+  .logos .largo { height: auto; width: 100%; padding: 2cqw 3cqw; background: #000; box-sizing: border-box; }
   .voluntario {
     margin: 5cqw 0 4cqw; padding: 4cqw 4.5cqw; border-radius: 4cqw;
     background: rgba(255, 255, 255, .12); font-size: 4.4cqw;
@@ -314,7 +312,6 @@
       <!-- 2. Gancho -->
       <section class="pagina escura gancho" data-escura>
         <div class="foto ilustracao"><img src="retinografia.jpg" alt="Exame de retinografia feito com celular no olho de um senhor"></div>
-        <p class="pequeno legenda-foto">Imagem ilustrativa</p>
         <h2>Ele não sentia nada.</h2>
         <h2 class="destaque">A glicemia dizia outra coisa.</h2>
         <p>Descobrir cedo é o que evita a perda da visão e a amputação.</p>
@@ -375,7 +372,7 @@
         <div class="parceiros">
           <p>Com estudantes e profissionais de:</p>
           <div class="logos">
-            <span>logo UFAL</span><span>logo Ong Inaê</span><span>ligas acadêmicas</span>
+            <img src="logo-ufal.jpg" alt="UFAL"><img src="logo-inae.jpg" alt="Ong Inaê"><img class="largo" src="logo-lias.jpg" alt="LIAS">
           </div>
         </div>
       </section>
